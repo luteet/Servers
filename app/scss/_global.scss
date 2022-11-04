@@ -57,6 +57,9 @@ body {
 
 .wrapper {
     min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
@@ -433,4 +436,15 @@ body {
 
 .full-screen {
     min-height: 100vh;
+}
+
+.flex-column-full {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+}
+
+.auto {
+    flex: 1 1 auto;
 }
