@@ -44,7 +44,7 @@
         width: 100%; height: 100%;
 
         @include _768 {
-            width: 80%;
+            width: 100%;
             &._large {
                 width: 100%;
             }
@@ -58,7 +58,7 @@
                 }
             }
             @include _992 {
-                width: 80%;
+                width: 100%;
                 &._large {
                     width: 100%;
                 }
@@ -68,7 +68,8 @@
         &._cover-on-table &--img {
             object-fit: cover;
             
-            opacity: .5;
+            opacity: .15;
+            height: 100%;
             @include _992 {
                 opacity: 1;
                 object-fit: contain;
@@ -82,23 +83,30 @@
         // .intro__bg--img
 
         &--img {
-            left: auto; right: 0; top: 0;
-            transform: translate(0%,0%);
+            left: auto; right: 0; top: 50%;
+            transform: translate(0%,-50%);
+
             object-position: center right;
             object-fit: contain;
+
             opacity: .8;
             min-width: 500px;
-            @include _768 {
+            height: 60%; width: auto;
+
+            @include _992 {
+                height: 100%; max-width: 100%;
+
                 opacity: 1;
-                left: 0; top: 0; right: auto;
-                transform: translate(0,18.5%);
-                object-position: bottom right;
+                right: 0;
+                object-position: bottom left;
             }
 
             &._cover {
                 object-fit: cover;
                 opacity: .5;
+                height: 100%;
                 @include _768 {
+
                     opacity: 1;
                     object-fit: contain;
                 }
@@ -117,7 +125,7 @@
         &._center &--img {
             @include _768 {
                 object-position: center right;
-                transform: translate(0,0);
+                transform: translate(0,-50%);
             }
         }
 
@@ -157,7 +165,7 @@
     }
 
     &._min-padding &__container {
-        padding-top: 35px;
+        padding-top: 15px;
 
         @include _768 {
             padding-top: 35px;
@@ -180,18 +188,23 @@
     // .intro__text
 
     &__sub-text {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         
         line-height: 150%;
         color: var(--light);
         flex: 1 1 auto;
-        font-size: 1rem;
+        font-size: 0.875rem;
         max-width: 900px;
 
-        margin-top: 30px;
+        margin-top: 20px;
 
         @include _768 {
+            font-size: 1rem;
             margin-left: 9.3%;
-            margin-top: 0px;
+            margin-top: 20px;
         }
 
         @include _992 {
@@ -200,7 +213,7 @@
     }
 
     &__btn {
-        margin-bottom: 15px;
+        margin-top: 15px;
         
         @media (min-width: 360px) {
             padding: 13px 15px;
@@ -208,6 +221,7 @@
 
         @media (min-width: 500px) {
             padding: 13px 30px;
+            margin-top: 25px;
         }
     }
 
@@ -226,6 +240,7 @@
         }
 
         @include _768 {
+            padding-top: 30px;
             justify-content: space-between;
             padding-bottom: 50px;
             padding-right: 30px;
@@ -235,7 +250,7 @@
             padding-right: 56px;
         }
 
-        padding-top: 30px;
+        padding-top: 15px;
         padding-bottom: 25px;
         padding-right: 15px;
         width: 100%;
@@ -295,7 +310,7 @@
 
     &__social {
 
-        padding-top: 40px;
+        padding-top: 10px;
 
         @include _768 {
             padding-top: 0;

@@ -275,6 +275,13 @@ body {
                 width: 200%; height: 1px;
                 transform: translate(-50%,0);
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0) -1.75%, #FFFFFF 104.14%);
+                pointer-events: none;
+
+                display: none;
+
+                @media (min-height: 930px) {
+                    display: block;
+                }
             }
             &::after {
                 content: '';
@@ -283,6 +290,7 @@ body {
                 width: 200%; height: 1px;
                 transform: translate(-50%,0);
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0) -1.75%, #48463F 104.14%);
+                pointer-events: none;
             } 
         }
     }
@@ -304,6 +312,7 @@ body {
                 width: 200%; height: 1px;
                 transform: translate(-50%,0);
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0) -1.75%, #FFFFFF 104.14%);
+                pointer-events: none;
             }
             &::after {
                 content: '';
@@ -312,14 +321,15 @@ body {
                 width: 200%; height: 1px;
                 transform: translate(-50%,0);
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0) -1.75%, #48463F 104.14%);
+                pointer-events: none;
             } 
         }
     }
 
     &__title {
         font-weight: 600;
-        font-size: 1.125rem;
-        line-height: 100%;
+        font-size: 1rem;
+        line-height: 133%;
         text-transform: uppercase;
         color: var(--white);
         
@@ -333,13 +343,14 @@ body {
     }
 
     &__text {
-        margin-top: 23px;
+        margin-top: 10px;
         border-left: 1px solid var(--white);
         padding-left: 10px;
 
-        font-size: 1rem;
+        font-size: 0.875rem;
 
         @include _768 {
+            margin-top: 23px;
             border-left: 2px solid var(--white);
             font-size: 1.125rem;
         }
@@ -447,4 +458,8 @@ body {
 
 .auto {
     flex: 1 1 auto;
+}
+
+img {
+    border: none;
 }

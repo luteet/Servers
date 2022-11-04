@@ -54,7 +54,6 @@
         z-index: -1;
 
         text-align: right;
-        
 
         &--img {
             position: absolute;
@@ -111,6 +110,8 @@
         
         max-width: 608px;
         margin-top: 30px;
+
+        flex: 1 1 auto;
 
         @include _768 {
             margin-top: 50px;
