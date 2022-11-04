@@ -1,0 +1,477 @@
+@@include("html/_header.html")
+
+    <main class="main docSlider">
+        <section class="intro docSlider-scroll" id="intro">
+            <div class="intro__wrapper">
+                @@include("html/_header-section.html")
+                <div class="intro__bg">
+                    <picture>
+                        <source srcset="img/index/intro/image.webp" type="image/webp">
+                        <img src="img/index/intro/image.png" alt="" width="0" height="0" class="intro__bg--img bg-img">
+                    </picture>
+                </div>
+                <div class="intro__container padding-left">
+                    <h1 class="intro__title main-title">
+                        Сдача в аренду серверов
+                        <mark>с высокой защитой</mark>
+                    </h1>
+                    <div class="intro__footer">
+                        <div class="intro__text text-block" style="--max: 540px;" data-span="Мы">
+                            <p>
+                                Мы предоставляем в аренду различные сервера и оказываем широкий спектр услуг по развертыванию инфраструктуры
+                                и обеспечению безопасности. Имеем многолетний опыт.
+                            </p>
+                        </div>
+                        <div class="intro__arrow">
+                            <a href="#rent" class="intro__arrow--btn" type="button" title="Вниз">
+                                <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.71891 25.7021C7.71922 25.7018 7.71957 25.7016 7.71988 25.7012L13.0011 20.3944C13.3968 19.9968 13.3953 19.3538 12.9977 18.958C12.6001 18.5623 11.9571 18.5638 11.5614 18.9614L8.01563 22.5244L8.01563 1.01562C8.01563 0.454695 7.56093 -2.50726e-07 7 -2.75245e-07C6.43907 -2.99764e-07 5.98438 0.454695 5.98438 1.01562L5.98438 22.5244L2.43863 18.9615C2.04294 18.5639 1.3999 18.5624 1.00233 18.9581C0.604664 19.3538 0.603293 19.9969 0.998879 20.3944L6.28013 25.7013C6.28043 25.7016 6.28079 25.7018 6.28109 25.7022C6.6781 26.0999 7.32323 26.0987 7.71891 25.7021Z" fill="#D0BD7B"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="intro__social">
+                            <a href="#" class="intro__social--link square-btn" title="Telegram">
+                                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5562 18.2413L12.0269 25.6867C12.7842 25.6867 13.1122 25.3613 13.5056 24.9707L17.0562 21.5773L24.4136 26.9653C25.7629 27.7173 26.7136 27.3213 27.0776 25.724L31.9069 3.09468L31.9082 3.09335C32.3362 1.09868 31.1869 0.318678 29.8722 0.808012L1.48557 11.676C-0.451763 12.428 -0.42243 13.508 1.15624 13.9973L8.41357 16.2547L25.2709 5.70668C26.0642 5.18135 26.7856 5.47201 26.1922 5.99735L12.5562 18.2413Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rent" id="rent">
+            <div class="rent__wrapper">
+                <div class="rent__large-image">
+                    <img src="img/index/rent/image-large.svg" width="930" height="930" loading="lazy" alt="" class="rent__large-image--img">
+                </div>
+                <h2 class="rent__title main-title padding-left">
+                    Сервера в аренду
+                    <mark>и аудит безопасности</mark>
+                </h2>
+                <div class="rent__container padding-left">
+                    <div class="rent__min-image">
+                        <img src="img/index/rent/image-min.svg" width="301" height="301" loadin="lazy" alt="" class="rent__min-image--img">
+                    </div>
+                    <div class="rent__min-block">
+                        <div class="rent__min-text">
+                            Развернуть собственную IT-инфраструктуру просто и выгодно, если обращаться к профессионалам
+                        </div>
+                        <div class="rent__min-line">
+                            <picture>
+                                <source srcset="img/index/rent/line.svg" media="(min-width: 992px)">
+                                <source srcset="img/index/rent/line-mob.svg">
+                                <img src="img/index/rent/line.svg" width="700" height="175" loadin="lazy" alt="" class="rent__min-line--img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="rent__text text-block" style="--max: 810px;">
+                        <p>
+                            Наша компания специализируется на сдаче в аренду высокопроизводительных серверов и оказании услуг по безопасности корпоративной сети, сайтов и приложений.
+                        </p>
+                        <p>
+                            <b>Предоставляем выгодные цены, легкую и конфиденциальную регистрацию, а также высокий уровень отказоустойчивости.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="docSlider-scroll dark-bg" id="section-list">
+            <div class="section-wrapper">
+                <div class="section-wrapper__main">
+                    <section class="services">
+                        <h2 class="services__title main-title padding-left">
+                            Услуги
+                        </h2>
+                        <ul class="services__list">
+                            @@loop("html/index/_services-item.html", [
+                                {"title": 'Облачные<br> сервера', "text": 'Если вам требуется развернуть небольшую инфраструктуру для повседневных задач, то рекомендуем использовать наши облачные сервера. Они работают на базе мощных процессоров AMD и NVMe SSD накопителях.'},
+                                {"title": 'Выделенные<br> сервера', "text": 'Подойдут тем, кто собирается работать с важными базами данных. Выделенные сервера полностью изолированы от других, что обеспечивает высокую безопасность и конфиденциальность. Есть автоматическая масштабируемость в зависимости от потребностей.'},
+                                {"title": 'Высоко-<wbr>производительные сервера', "text": 'Направлены на выполнение сложных задач, требующих высокой производительности. Они работают на основе AMD Ryzen Threadripper 3990X. Также отличаются повышенной защитой от DDoS атак. Имеют автомасштабируемость. При этом имеют почасовую оплату, что позволит вам решать трудные задачи без переплат.'},
+                                {"title": 'Регистрация<br> доменов', "text": 'Подобрать домен может быть достаточно сложно. У нас вы можете выполнить проверку доменного имени и зарегистрировать его в любом сегменте на выбор. Предоставляем разумные цены и долгосрочную аренду доменного имени com или ru.'},
+                                {"title": 'WAF', "text": 'Используется для защиты web-приложений. Обеспечивает конфиденциальность, минимизирует риски взлома. Позволяет повысить отказоустойчивость системы. Используем различные методики WAF-защиты.'},
+                                {"title": 'DDOS<br> защита', "text": '«Положить» сайт достаточно просто, если превысить допустимые на него нагрузки. Чтобы этого не произошло мы повышаем отказоустойчивость системы и обеспечиваем масштабируемость. В результате в пиковые нагрузки ваш сайт выдержит их без проблем.'},
+                            ])
+                        </ul>
+                    </section>
+                    <section class="how-communicate">
+                        <div class="how-communicate__bg">
+                            <picture>
+                                <source srcset="img/index/how-communicate/image.webp" type="image/webp">
+                                <img src="img/index/how-communicate/image.png" loading="lazy" alt="" width="0" height="0" class="how-communicate__bg--img">
+                            </picture>
+                        </div>
+                        <div class="how-communicate__content padding-left">
+                            <div class="how-communicate__block">
+                                <h2 class="how-communicate__title section-title">
+                                    Как к нам обратиться
+                                </h2>
+                                <div class="how-communicate__text">
+                                    Для удобства наших клиентов мы предоставляем различные тарифные планы на все услуги. Это позволяет вам выбирать оптимальный вариант под свои потребности. У нас есть как почасовая оплата услуг, например, при аренде серверов, так и возможность заключения договоров на долгосрочное сотрудничество. В таких случаях предоставляем скидки.
+                                </div>
+                            </div>
+                            <div class="how-communicate__min-block" data-span="Как к нам обратиться">
+                                <h3 class="how-communicate__min-block--title title">
+                                    Узнать цены вы можете непосредственно на страницах услуг.
+                                </h3>
+                                <div class="how-communicate__min-block--text">
+                                    Чтобы оформить заказ достаточно пройти простую регистрацию. Мы не собираем конфиденциальные данные, а потому хватит электронной почты. Оплата услуг производится удобным для вас способом.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="domains">
+                        <div class="domains__container padding-left">
+                            <h2 class="domains__title section-title">
+                                Домены
+                            </h2>
+                            <ul class="domains__list">
+                                @@loop("html/index/_domain.html", [
+
+                                    {"name": '.ru', "value": '15 $'},
+                                    {"name": '.su', "value": '30 $'},
+                                    {"name": '.com', "value": '30 $'},
+                                    {"name": '.net', "value": '30 $'},
+                                    {"name": '.org', "value": '18 $'},
+
+                                    {"name": '.host', "value": '32 $'},
+                                    {"name": '.pro', "value": '32 $'},
+                                    {"name": '.pw', "value": '32 $'},
+                                    {"name": '.name', "value": '20 $'},
+                                    {"name": '.moscow', "value": '28 $'},
+
+                                    {"name": '.kz', "value": '28 $'},
+                                    {"name": '.tatar', "value": '28 $'},
+                                    {"name": '.tv', "value": '22 $'},
+                                    {"name": '.tv', "value": '36 $'},
+                                    {"name": '.co', "value": '36 $'},
+
+                                    {"name": '.de', "value": '36 $'},
+                                    {"name": '.cc', "value": '25 $'},
+                                    {"name": '.nu', "value": '24 $'},
+                                    {"name": '.academy', "value": '24 $'},
+                                    {"name": '.agency', "value": '24 $'},
+
+                                ])
+                            </ul>
+                        </div>
+                        <div class="domains__check">
+                            <div class="domains__check--body">
+                                <div class="domains__check--image">
+                                    <img src="img/index/check-domain/image.svg" loading="lazy" width="500" height="197" alt="" class="domains__check--img">
+                                </div>
+                                <div class="domains__check--content">
+                                    <h3 class="domains__check--title">
+                                        Проверка на свободный домен
+                                    </h3>
+                                    <form action="#" class="domains__check--form">
+                                        <div class="domains__check--item">
+                                            <h4 class="domains__check--item-title">Введите название</h4>
+                                            <label class="domains__check--label">
+                                                <input type="text" name="title" placeholder="Название" class="domains__check--input input">
+                                            </label>
+                                        </div>
+                                        <div class="domains__check--item _min">
+                                            <h4 class="domains__check--item-title">Выберите домен</h4>
+                                            <div class="domains__check--select-wrapper select-wrapper">
+                                                <select name="domain" class="domains__check--select select">
+                                                    <option value=".com" selected>.com</option>
+                                                    <option value=".org">.org</option>
+                                                    <option value=".net">.net</option>
+                                                </select>
+                                                <svg class="domains__check--select-arrow select-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.49996 8.20529C6.26698 8.20529 6.03402 8.11633 5.85639 7.93878L0.266684 2.34902C-0.0888946 1.99344 -0.0888946 1.41693 0.266684 1.0615C0.622118 0.706063 1.19851 0.706063 1.55412 1.0615L6.49996 6.00763L11.4458 1.06167C11.8014 0.706236 12.3778 0.706236 12.7332 1.06167C13.0889 1.4171 13.0889 1.99361 12.7332 2.34919L7.14354 7.93896C6.96582 8.11653 6.73286 8.20529 6.49996 8.20529Z" fill="#AAA388"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="domains__check--item _min">
+                                            <button class="domains__check--submit btn" type="submit">
+                                                Проверить
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                @@include("html/_footer-section.html")
+            </div>
+        </div>
+    </main>
+
+    <div class="domain-check-result popup" id="domain-check-popup" style="display: none;">
+        <div class="domain-check-result__wrapper popup-wrapper">
+            <div class="domain-check-result__bg popup-bg popup-close"></div>
+            <div class="domain-check-result__body popup-body">
+                <button type="button" class="domain-check-result__close-btn popup-close-btn popup-close" title="Закрыть">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971">
+                        <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+                    </svg>
+                </button>
+                <form action="#" class="domain-check-result__scroll-section popup-scroll-section">
+                    <div class="domain-check-result__title title _super-large">
+                        Результат проверки
+                    </div>
+                    <label class="domain-check-result__label">
+                        <input type="text" name="domain" value=".host" readonly class="domain-check-result__input input">
+                    </label>
+                    <div class="domain-check-result__block">
+                        <div class="domain-check-result__block--item">
+                            <h3 class="domain-check-result__block--title green">
+                                Доступны:
+                            </h3>
+                            <ul class="domain-check-result__block--list domain-check-result__list">
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .ru
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            15 $
+                                        </b>
+                                    </div>
+                                    <a href="#" class="domain-check-result__li--link">
+                                        Заказать
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="domain-check-result__block--item">
+                            <h3 class="domain-check-result__block--title red">
+                                Не доступны:
+                            </h3>
+                            <ul class="domain-check-result__block--list domain-check-result__list">
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                                <li class="domain-check-result__li">
+                                    <div class="domain-check-result__li--element">
+                                        <span class="domain-check-result__li--name">
+                                            .com
+                                        </span>
+                                        <b class="domain-check-result__li--price">
+                                            30 $
+                                        </b>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            Popup.open('#domain-check-popup')
+        }
+    </script>
+
+@@include("html/_footer.html")

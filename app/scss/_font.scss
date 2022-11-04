@@ -1,0 +1,252 @@
+
+.main-title {
+    font-family: var(--title-font);
+    font-weight: 500;
+    line-height: 133%;
+    text-transform: uppercase;
+
+    margin: 0;
+
+    &._line-height-min {
+        line-height: 90%;
+
+        & mark {
+            line-height: 90%;
+        }
+    }
+
+    &._none-margin mark {
+        @include _768 {
+            margin-left: 0;
+        }
+        
+        @include _992 {
+            margin-left: 0;
+        }
+
+        @media (min-width: 1440px) {
+            margin-left: 0;
+        }
+    }
+
+    & span {
+        display: block;
+
+        @include _768 {
+            margin-left: 30px;
+        }
+        
+        @include _992 {
+            margin-left: 100px;
+        }
+
+        @media (min-width: 1440px) {
+            margin-left: 150px;
+        }
+    }
+
+    & mark {
+        display: block;
+        position: relative;
+        background: transparent;
+        color: var(--dark);
+        line-height: 133%;
+
+        @include _768 {
+            margin-left: 30px;
+        }
+        
+        @include _992 {
+            margin-left: 100px;
+        }
+
+        @media (min-width: 1440px) {
+            margin-left: 150px;
+        }
+
+        -webkit-text-stroke: 1px var(--white);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: -5px; top: 17px;
+            transform: translate(-100%,-50%);
+            @include _768 {
+                left: -10px;
+                top: 30px;
+                transform: translate(-100%,-50%);
+                background: var(--accent);
+            }
+            @include _992 {
+                top: 45px;
+            }
+            @media (min-width: 1440px) {
+                top: 65px;
+            }
+            width: 100%; height: 2px;
+            background: var(--white);
+        }
+    }
+
+    font-size: 1.5625rem;
+
+    @include _768 {
+        font-size: 2.5rem;
+    }
+
+    @include _992 {
+        font-size: 4rem;
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 5.9375rem;
+    }
+}
+
+.title {
+    
+    font-family: var(--title-font);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    font-size: 1rem;
+    line-height: 150%;
+
+    &._large {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+
+    &._super-large {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    @include _768 {
+        &._large {
+            font-size: 1.5rem;
+        }
+
+        &._super-large {
+            font-size: 2rem;
+        }
+    }
+
+    @include _992 {
+        font-size: 1.125rem;
+
+        &._large {
+            font-size: 2.1875rem;
+        }
+
+        &._super-large {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.article-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 100%;
+
+    @include _768 {
+        font-size: 2.5rem;
+    }
+    
+    @include _992 {
+        font-size: 3.4375rem;
+    }
+
+    &._min {
+
+        font-size: 1.25rem;
+
+        @include _768 {
+            font-size: 2rem;
+        }
+        
+        @include _992 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.decor-line {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -5px; top: 50%;
+        transform: translate(-100%,-100%);
+        width: 17px; height: 1px;
+        background: var(--light);
+    }
+    &._accent::before {
+        background: var(--accent);
+    }
+}
+
+/* .section-title {
+
+    font-family: var(--title-font);
+    font-weight: 700;
+
+} */
+
+.txt-center {
+    text-align: center;
+}
+
+.gradient-title {
+    font-weight: 600;
+    font-size: 1.5625rem;
+    line-height: 111%;
+    text-transform: uppercase;
+
+    opacity: .9;
+
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white);
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+    /* background: linear-gradient(180deg, #FFFFFF -7.95%, rgba(255, 255, 255, 0) 118.9%);
+    background-clip: text; */
+
+    @include _768 {
+        font-size: 1.75rem;
+    }
+    
+    @include _992 {
+        font-size: 2.25rem;
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 2.8125rem;
+    }
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 1.5625rem;
+    line-height: 129%;
+    text-transform: uppercase;
+
+    @include _768 {
+        font-size: 3rem;
+    }
+    
+    @include _992 {
+        font-size: 5.3125rem;
+    }
+}
+
+.green {
+    color: var(--green);
+}
+
+.red {
+    color: var(--red);
+}
+
+

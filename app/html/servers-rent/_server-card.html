@@ -1,0 +1,48 @@
+<li class="server__block--card server__card">
+    <div class="server__card--body">
+        <h5 class="server__card--title">
+            @@name
+        </h5>
+        <ul class="server__card--config">
+            <li>
+                1 ядро
+            </li>
+            <li>
+                2 ГБ оперативной памяти
+            </li>
+            <li>
+                30 ГБ NVMe
+            </li>
+        </ul>
+        <div class="server__card--footer">
+            <div class="server__card--price">
+                <div class="server__card--price-col">
+                    <span>Час</span>
+                    <b>@@price-hour</b>
+                </div>
+                <div class="server__card--price-col">
+                    <label class="server__card--label">
+                        <input type="radio" name="server-card-@@id" value="eps-@@id_value-hour" class="server__card--input">
+                        <span class="server__card--label-btn transparent-btn">
+                            Выбрать
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="server__card--price">
+                <div class="server__card--price-col">
+                    <span>Месяц</span>
+                    <b>@@price-mounth</b>
+                </div>
+                <div class="server__card--price-col">
+                    <label class="server__card--label">
+                        <input type="radio" name="server-card-@@id" value="eps-@@id_value-mounth" class="server__card--input">
+                        <span class="server__card--label-btn transparent-btn">
+                            Выбрать
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

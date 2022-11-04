@@ -1,0 +1,155 @@
+@@include("html/_header.html")
+
+    <main class="main docSlider">
+        <section class="intro docSlider-scroll" id="intro">
+            <div class="intro__wrapper">
+                @@include("html/_header-section-2.html", {
+                    "link": 'IT услуги',
+                })
+                <div class="intro__bg _center">
+                    <picture>
+                        <source srcset="img/IT-services/intro/image.webp" type="image/webp">
+                        <img src="img/IT-services/intro/image.png" alt="" width="0" height="0" class="intro__bg--img bg-img _cover">
+                    </picture>
+                </div>
+                <div class="intro__container padding-left">
+                    <h1 class="intro__title main-title _line-height-min">
+                        IT-услуги
+                        <span>Для развития</span>
+                        <mark>и безопасности сайтов</mark>
+                    </h1>
+                    <div class="intro__footer">
+                        <div class="intro__text text-block" style="--max: 600px;">
+                            <p>
+                                Предоставляем широкий спектр IT-услуг для обеспечения эффективного развития и безопасности сайтов и приложений по разумным ценам
+                            </p>
+                        </div>
+                        <div class="intro__arrow">
+                            <a href="#section-list" class="intro__arrow--btn" type="button" title="Вниз">
+                                <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.71891 25.7021C7.71922 25.7018 7.71957 25.7016 7.71988 25.7012L13.0011 20.3944C13.3968 19.9968 13.3953 19.3538 12.9977 18.958C12.6001 18.5623 11.9571 18.5638 11.5614 18.9614L8.01563 22.5244L8.01563 1.01562C8.01563 0.454695 7.56093 -2.50726e-07 7 -2.75245e-07C6.43907 -2.99764e-07 5.98438 0.454695 5.98438 1.01562L5.98438 22.5244L2.43863 18.9615C2.04294 18.5639 1.3999 18.5624 1.00233 18.9581C0.604664 19.3538 0.603293 19.9969 0.998879 20.3944L6.28013 25.7013C6.28043 25.7016 6.28079 25.7018 6.28109 25.7022C6.6781 26.0999 7.32323 26.0987 7.71891 25.7021Z" fill="#CECECE"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="intro__social">
+                            <a href="#" class="intro__social--link square-btn" title="Telegram">
+                                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5562 18.2413L12.0269 25.6867C12.7842 25.6867 13.1122 25.3613 13.5056 24.9707L17.0562 21.5773L24.4136 26.9653C25.7629 27.7173 26.7136 27.3213 27.0776 25.724L31.9069 3.09468L31.9082 3.09335C32.3362 1.09868 31.1869 0.318678 29.8722 0.808012L1.48557 11.676C-0.451763 12.428 -0.42243 13.508 1.15624 13.9973L8.41357 16.2547L25.2709 5.70668C26.0642 5.18135 26.7856 5.47201 26.1922 5.99735L12.5562 18.2413Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="docSlider-scroll dark-bg" id="section-list">
+            <div class="section-wrapper">
+                <div class="section-wrapper__main">
+                    <section class="add-section">
+                        <div class="add-section__wrapper">
+                            <div class="add-section__image">
+                                <picture>
+                                    <source srcset="img/IT-services/add-section/image.webp" type="image/webp">
+                                    <img src="img/IT-services/add-section/image.png" loading="lazy" alt="" width="0" height="0" class="add-section__image--img">
+                                </picture>
+                            </div>
+                            <h2 class="add-section__title main-title padding-left">
+                                IT - услуги для вашего 
+                                <mark>сайта и приложений</mark>
+                            </h2>
+                            <div class="add-section__container padding-left">
+                                <div class="add-section__min-block">
+                                    <div class="add-section__min-text">
+                                        Развернуть собственную IT-инфраструктуру просто и выгодно, если обращаться к профессионалам
+                                    </div>
+                                </div>
+                                <div class="add-section__text text-block" style="--max: 810px;">
+                                    <p>
+                                        Наша компания специализируется на сдаче в аренду высокопроизводительных серверов и оказании услуг по безопасности корпоративной сети, сайтов и приложений.
+                                    </p>
+                                    <p>
+                                        <b>Предоставляем выгодные цены, легкую и конфиденциальную регистрацию, а также высокий уровень отказоустойчивости.</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="it-services">
+                        <div class="it-services__wrapper">
+                            <h2 class="it-services__title main-title padding-left">
+                                Сервисы
+                            </h2>
+                            <ul class="it-services__list services-z-index-wrapper">
+                                @@loop("html/it-services/_it-services-item.html", [
+                                    {"title": 'WAF<br> защита', "text": 'Применение специального файрвола для защиты web-приложений обеспечит надежную защиту серверов от различных угроз. Мы задействуем несколько сценариев защиты, благодаря чему обеспечивается высокая эффективность защиты.'},
+                                    {"title": 'DDoS<br> защита', "text": 'Массированные атаки для перегрузки систем – один из самых распространенных способов прекратить работу сайта. Мы используем методики для защиты от DDoS-атак, повышая отказоустойчивость систем при высоких нагрузках.'},
+                                    {"title": 'Регистрация<br> доменов', "text": 'Вы можете зарегистрировать свой собственный домен по доступной цене. предоставляем широкий выбор доменных имен в различных се гментах Интернет-сети. У нас можно купить домен com, org, net, info и т.д.'},
+                                    {"title": 'Крипто<br> хранилища', "text": 'Подобрать домен может быть достаточно сложно. У нас вы можете выполнить проверку доменного имени и зарегистрировать его в любом сегменте на выбор. Предоставляем разумные цены и долгосрочную аренду доменного имени com или ru.'},
+                                    {"title": 'Аудит безопасности корпоративных сетей', "text": 'Цель – выявить возможные уязвимости и неисправности в корпоративной сети. По результатам аудита предоставляем отчет с грамотными рекомендациями для устранения рисков снижения безопасности системы. Есть разовый аудит и на постоянной основе.'},
+                                    {"title": 'Аудит безопасности сайта', "text": 'Ресурсы в Интернет-сети постоянно подвергаются различным атакам, направленным на прекращение работы сайтов и потери целевой аудитории. Проводим поиск и анализ уязвимостей, которые могут привести к снижению работы. Повышаем отказоустойчивость ресурса эффективными методами.'},
+                                    {"title": 'Разработка<br> приложений', "text": 'Для эффективного ведения бизнеса и расширения целевой аудитории или повышения узнаваемости бренда требуется создание собственного сайта или приложения. Наша команда выполняет разработку с применением различных языков программирования. '},
+                                    {"title": 'Разработка<br> сайтов', "text": 'Обеспечиваем высокую отказоустойчивость и беспрерывность работы ресурсов. Получите консультацию по услугам у нашего представителя. Напишите удобным для вас способом. Мы ответим на все ваши вопросы.'},
+                                ])
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                @@include("html/_footer-section.html")
+            </div>
+        </div>
+    </main>
+
+    <div class="server-side popup _side" id="servers-popup" style="display: none;">
+        <div class="server-side__wrapper popup-wrapper">
+            <div class="server-side__bg popup-bg popup-close"></div>
+            <div class="server-side__body popup-body">
+                <button type="button" class="server-side__close-btn popup-close-btn popup-close" title="Закрыть">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971">
+                        <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+                    </svg>
+                </button>
+                <form action="#" class="server-side__inner popup-scroll-section">
+                    <h2 class="server-side__title">
+                        Выбранные параметры
+                    </h2>
+                    <ul class="server-side__list">
+                        <li class="server-side__item">
+                            <h3 class="server-side__item--title">
+                                Геолокация:
+                            </h3>
+                            <select name="geo" class="server-side__item--select custom-select">
+                                <option value="austria" data-image="img/vps-rent/servers-rent/geo/geo-1.svg">Austria</option>
+                                <option value="netherlands" data-image="img/vps-rent/servers-rent/geo/geo-2.svg">Netherlands</option>
+                            </select>
+                        </li>
+                        <li class="server-side__item">
+                            <h3 class="server-side__item--title">
+                                Сервер:
+                            </h3>
+                            <select name="config" class="server-side__item--select custom-select">
+                                <option value="config-1">EPs-2 (Rizen 5 5700, 16RAM, 256 SSD)</option>
+                                <option value="config-2">EPs-3 (Rizen 5 5700, 16RAM, 256 SSD)</option>
+                                <option value="config-3">EPs-4 (Rizen 5 5700, 16RAM, 256 SSD)</option>
+                            </select>
+                        </li>
+                        <li class="server-side__item">
+                            <h3 class="server-side__item--title">
+                                Операционная система:
+                            </h3>
+                            <select name="os" class="server-side__item--select custom-select">
+                                <option value="windows">Windows</option>
+                                <option value="linux">Linux</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="server-side__footer">
+                        <button class="server-side__submit btn _accent" type="submit">
+                            Заказать
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+@@include("html/_footer.html")

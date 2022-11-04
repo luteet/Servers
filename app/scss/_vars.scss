@@ -1,0 +1,73 @@
+
+
+$containerPadding: 15;
+
+$container: 1440 + ($containerPadding * 2);
+$containerMin: 1280 + ($containerPadding * 2);
+$containerLarge: 1560 + ($containerPadding * 2);
+
+:root {
+    --title-font: 'Mazzard H';
+    --main-font: 'Mazzard H';
+    
+    --accent-light: #eedb99;
+    --accent: #D0BD7B;
+    --accent-dark: #a39255;
+    --accent-gray: #AAA388;
+
+    --light: #CECECE;
+
+    --dark: #0C0B0B;
+    --dark-2: #121212;
+    --dark-3: #181818;
+    --dark-4: #1E1C1C;
+
+    --dark-gray: #333333;
+    --dark-gray-2: #444444;
+    --dark-gray-3: #222222;
+
+    --gray: #858585;
+
+    --white: #FFF;
+    --black: #000;
+    --green: #4F920D;
+    --red: #9B0606;
+
+    //--container-padding: 15px;
+}
+
+@font-face {
+    @include font-include('Mazzard H', 300, swap, normal, 'MazzardH-Light');
+}
+
+@font-face {
+    @include font-include('Mazzard H', 400, swap, normal, 'MazzardH-Regular');
+}
+
+@font-face {
+    @include font-include('Mazzard H', 500, swap, normal, 'MazzardH-Medium');
+}
+
+@font-face {
+    @include font-include('Mazzard H', 600, swap, normal, 'MazzardH-SemiBold');
+}
+
+@font-face {
+    @include font-include('Mazzard H', 700, swap, normal, 'MazzardH-Bold');
+}
+
+@font-face {
+    @include font-include('Mazzard M', 400, swap, normal, 'MazzardM-Regular');
+}
+
+@font-face {
+    @include font-include('Mazzard M', 600, swap, normal, 'MazzardM-SemiBold');
+}
+
+@font-face {
+    @include font-include('Mazzard M', 700, swap, normal, 'MazzardM-Bold');
+}
+
+@font-face {
+    @include font-include('Mazzard M', 900, swap, normal, 'MazzardM-Black');
+}

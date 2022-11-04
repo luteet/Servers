@@ -1,0 +1,32 @@
+.servers-rent {
+
+    // .servers-rent__form
+
+    &__form {
+    }
+
+    // .servers-rent__map
+
+    &__map {
+    }
+
+    // .servers-rent__geo
+
+    &__geo {
+    }
+
+    // .servers-rent__server
+
+    &__server {
+    }
+
+    // .servers-rent__os
+
+    &__os {
+    }
+}
+
+@import 'map';
+@import 'geo';
+@import 'server';
+@import 'os';

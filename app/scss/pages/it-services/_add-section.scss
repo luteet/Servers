@@ -1,0 +1,135 @@
+.add-section {
+
+    background: var(--dark);
+    
+    @include _992 {
+        min-height: 100vh;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    // .add-section__wrapper
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+
+        padding: 50px 0 30px 0;
+
+        min-height: 100%;
+        flex: 1 1 auto;
+
+        display: flex;
+        flex-direction: column;
+        
+        @include _992 {
+            padding: 50px 0 50px 0;
+        }
+        
+        @media (min-width: 1440px) {
+            padding: 50px 0 50px 0;
+        }
+
+        
+    }
+
+    // .add-section__image
+
+    &__image {
+        position: absolute;
+        right: 0; bottom: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+
+        text-align: right;
+        //overflow: hidden;
+
+        &--img {
+            position: absolute;
+            right: -50%; top: 50%;
+            transform: translate(-25%,-50%);
+            object-position: bottom right;
+            height: auto; width: 50%;
+            object-fit: contain;
+            user-select: none;
+            
+            @include _992 {
+                right: 0;
+                transform: translate(0,-50%);
+                width: 75%;
+            }
+
+            @media (min-width: 1440px) {
+                top: 100%;
+                transform: translate(0,-70%);
+            }
+        }
+    }
+
+    // .add-section__title
+
+    &__title {
+    }
+
+    // .add-section__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 100%;
+        flex: 1 1 auto;
+        
+        @include _992 {
+            max-width: 75%;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 1440px) {
+            max-width: 60%;
+        }
+
+        position: relative;
+    }
+
+    // .add-section__min-block
+
+    &__min-block {
+        
+        max-width: 608px;
+        margin-top: 30px;
+
+        @include _768 {
+            margin-top: 50px;
+        }
+        
+        @include _992 {
+            flex: 0 1 auto;
+            margin-left: 47%;
+            margin-top: 50px;
+        }
+    }
+
+    // .add-section__min-text
+
+    &__min-text {
+    }
+
+    // .add-section__text
+
+    &__text {
+
+        margin-top: 30px;
+
+        @include _768 {
+            margin-top: 50px;
+        }
+        
+        @include _992 {
+            align-self: flex-end;
+        }
+    }
+}
+

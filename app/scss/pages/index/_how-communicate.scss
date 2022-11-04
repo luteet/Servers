@@ -1,0 +1,115 @@
+.how-communicate {
+
+    padding: 45px 0 35px 0;
+    position: relative;
+
+    @include _768 {
+        padding: 75px 0 64px 0;
+    }
+    
+    @include _992 {
+        padding: 135px 0 124px 0;
+    }
+
+    // .how-communicate__bg
+
+    &__bg {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+
+        text-align: right;
+
+        // .how-communicate__bg--img
+
+        &--img {
+            @include _992 {
+                user-select: none;
+                width: 60%; height: auto;
+                transform: translate(0,-47%);
+            }
+        }
+    }
+
+    // .how-communicate__content
+
+    &__content {
+    }
+
+    // .how-communicate__block
+
+    &__block {
+    }
+
+    // .how-communicate__title
+
+    &__title {
+        
+    }
+
+    // .how-communicate__text
+
+    &__text {
+        padding-top: 15px;
+        font-size: 0.9375rem;
+        line-height: 147%;
+
+        max-width: 1050px;
+    }
+
+    // .how-communicate__min-block
+
+    &__min-block {
+
+        margin-top: 20px;
+        position: relative;
+        
+        @include _992 {
+            padding-left: 40%;
+        }
+
+        &::before {
+            content: attr(data-span);
+            position: absolute;
+            left: 0; top: 50%;
+            transform: translate(0,-50%);
+            z-index: -1;
+
+            max-width: 1250px;
+            user-select: none;
+
+            font-weight: 700;
+            font-size: 2.8125rem;
+            line-height: 91%;
+            color: rgba(255, 255, 255, 0.02);
+            text-transform: uppercase;
+
+            @include _768 {
+                font-size: 10.625rem;
+            }
+            
+            @include _992 {
+                font-size: 10.625rem;
+            }
+
+        }
+
+        // .how-communicate__min-block--title
+
+        &--title {
+            max-width: 400px;
+            
+        }
+
+        // .how-communicate__min-block--text
+
+        &--text {
+            padding-top: 16px;
+
+            max-width: 845px;
+            font-size: 0.9375rem;
+            line-height: 147%;
+        }
+    }
+}

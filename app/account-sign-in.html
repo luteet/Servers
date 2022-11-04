@@ -1,0 +1,54 @@
+@@include("html/_header.html")
+
+    <main class="main">
+        <section class="intro full-screen">
+            <div class="intro__wrapper">
+                @@include("html/_header-section.html")
+                <div class="intro__bg">
+                    <picture>
+                        <source srcset="img/IT-services/intro/image.webp" type="image/webp">
+                        <img src="img/IT-services/intro/image.png" alt="" width="0" height="0" class="intro__bg--img bg-img _cover">
+                    </picture>
+                </div>
+                <div class="intro__container padding-inline">
+                    <form action="#" class="account">
+                        <h1 class="account__title main-title">
+                            ВХод
+                        </h1>
+                        <div class="account__row">
+                            <label class="account__label">
+                                <span class="account__label--legend">
+                                    E-mail
+                                </span>
+                                <input type="email" name="email" required placeholder="E-mail" class="account__input input">
+                            </label>
+                            <label class="account__label">
+                                <span class="account__label--legend">
+                                    Пароль
+                                </span>
+                                <input type="password" name="password" required placeholder="Пароль" class="account__input input">
+                            </label>
+                        </div>
+                        <div class="account__footer">
+                            <div class="account__footer--col">
+                                <button class="account__submit btn" type="submit">
+                                    Войти
+                                </button>
+                                <a href="#" class="account__link btn-link">
+                                    Создать аккаунт
+                                </a>
+                            </div>
+                            <div class="account__footer--col">
+                                <a href="#" class="account__link btn-link">
+                                    Забыли пароль?
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        @@include("html/_footer-section.html")
+    </main>
+
+@@include("html/_footer.html")
