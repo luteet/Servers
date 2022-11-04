@@ -348,13 +348,10 @@ function setRequired(block, inputClass) {
   allInputs.forEach(input => {
     input.removeAttribute('required');
     input.checked = false;
-    /* input.hidden = true;
-    input.checked = false; */
   })
 
   inputs.forEach(input => {
     input.required = true;
-    //input.hidden = false;
   })
 
 }
@@ -369,19 +366,7 @@ if(document.querySelector('.server__tab-block._active')) {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <Media screen> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let resizeCheck = {}, windowSize;
-
-function resizeCheckFunc(size, minWidth, maxWidth) {
-  if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
-    resizeCheck[String(size)] = false;
-    maxWidth(); // < size
-  }
-
-  if (windowSize >= size && (resizeCheck[String(size)] == false || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != true) {
-    resizeCheck[String(size)] = true;
-    minWidth(); // > size
-  }
-}
+let windowSize;
 
 function resize() {
 
@@ -396,17 +381,6 @@ window.onresize = resize;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Media screen> -=-=-=-=-=-=-=-=-=-=-=-=
 
-/* 
-// =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-wow = new WOW({
-mobile:       false,
-})
-wow.init();
-
-// =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-*/
 
 function servicesItemZIndex() {
   const wrapper = document.querySelectorAll('.services-z-index-wrapper');

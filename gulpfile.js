@@ -136,8 +136,7 @@ function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/docslider/docSlider.css',
-        'node_modules/swiper/swiper-bundle.min.css', // Слайдер
-        //''
+        //'node_modules/swiper/swiper-bundle.min.css', // Слайдер
         //'node_modules/slick-carousel/slick/slick.css', // Слайдер (jQuery)
         //'node_modules/magnific-popup/dist/magnific-popup.css' // Попап (jQuery)
         //'node_modules/aos/dist/aos.css', // Анимация
