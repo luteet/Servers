@@ -31,12 +31,12 @@
     }
 
     &__logo {
-        max-width: 76px;
+        max-width: 130px;
         @include _768 {
             max-width: 121px;
         }
         &--img {
-            width: 100%; height: 25px;
+            width: 100%; height: 30px;
             object-fit: contain;
             @include _768 {
                 height: 37px;

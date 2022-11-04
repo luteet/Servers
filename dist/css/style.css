@@ -194,6 +194,10 @@ textarea {
     font: inherit
 }
 
+*,body {
+    line-height: 160%
+}
+
 summary {
     display: list-item
 }
@@ -280,10 +284,6 @@ body,html {
     overflow-scrolling: touch
 }
 
-.add-section,.docSlider-scroll,.intro,.services__list,body {
-    overflow-x: hidden
-}
-
 :root {
     --title-font: "Mazzard H";
     --main-font: "Mazzard H";
@@ -342,15 +342,11 @@ body,html {
     font-weight:900;font-family:"Mazzard M";font-display:swap;font-style:normal;src:url(MazzardM-Black.woff) format("woff"),url(MazzardM-Black.woff2) format("woff2")
 }
 
-* {
-    line-height: 160%
-}
-
 body {
     font-family: var(--main-font);
     font-weight: 400;
-    line-height: 160%;
     overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     z-index: 2;
     touch-action: auto;
@@ -359,7 +355,13 @@ body {
 }
 
 .btn,.btn-link {
-    font-weight: 500
+    line-height: 171%;
+    font-size: .875rem;
+    text-align: center
+}
+
+.link,.text-block {
+    color: var(--light)
 }
 
 body._slider-active {
@@ -376,13 +378,7 @@ body.blur .main {
 }
 
 .link {
-    color: var(--light);
     border-bottom: 1px solid var(--light)
-}
-
-.btn,.domain-check-result__li--link {
-    color: var(--accent);
-    text-align: center
 }
 
 .offset-check-js {
@@ -419,7 +415,7 @@ body.blur .main {
     min-height: 100%
 }
 
-.btn,.btn-link,.content-block,.text-block {
+.btn,.btn-link,.content-block,.text-block,.transparent-btn {
     display: inline-block
 }
 
@@ -444,10 +440,10 @@ body.blur .main {
 
 .btn {
     text-transform: uppercase;
-    font-size: .875rem;
-    line-height: 171%;
+    font-weight: 500;
     padding: 13px 15px;
     background: rgba(0,0,0,0);
+    color: var(--accent);
     border-radius: 0;
     border: 1px solid var(--accent);
     transition: color .2s ease-in-out,background .2s ease-in-out,border .2s ease-in-out
@@ -484,9 +480,7 @@ body.blur .main {
 
 .btn-link {
     text-transform: uppercase;
-    font-size: .875rem;
-    line-height: 171%;
-    text-align: center;
+    font-weight: 500;
     padding: 13px 0;
     background: rgba(0,0,0,0);
     color: var(--white);
@@ -516,7 +510,6 @@ body.blur .main {
 
 .text-block {
     position: relative;
-    color: var(--light);
     border-left: 1px solid var(--accent);
     padding-left: 10px;
     font-size: .75rem;
@@ -540,6 +533,11 @@ body.blur .main {
     font-size: 16rem;
     line-height: 100%;
     white-space: nowrap
+}
+
+.decor-line::before,.main-title mark::before {
+    left: -5px;
+    content: ""
 }
 
 .text-block._light {
@@ -566,11 +564,6 @@ body.blur .main {
     line-height: 100%;
     text-transform: uppercase;
     color: var(--white)
-}
-
-.main-title,.title {
-    font-family: var(--title-font);
-    font-weight: 500
 }
 
 .content-block__text {
@@ -626,6 +619,7 @@ body.blur .main {
 }
 
 .docSlider-scroll {
+    overflow-x: hidden;
     pointer-events: none
 }
 
@@ -635,7 +629,6 @@ body.blur .main {
 
 .transparent-btn {
     cursor: pointer;
-    display: inline-block;
     text-align: center;
     font-size: 15px;
     line-height: 160%;
@@ -676,6 +669,8 @@ body.blur .main {
 }
 
 .main-title {
+    font-family: var(--title-font);
+    font-weight: 500;
     line-height: 133%;
     margin: 0
 }
@@ -698,9 +693,7 @@ body.blur .main {
 }
 
 .main-title mark::before {
-    content: "";
     position: absolute;
-    left: -5px;
     top: 17px;
     -webkit-transform: translate(-100%,-50%);
     transform: translate(-100%,-50%);
@@ -709,7 +702,13 @@ body.blur .main {
     background: var(--white)
 }
 
+.main-title._line-height-min mark::before {
+    top: 10px
+}
+
 .title {
+    font-family: var(--title-font);
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 150%
@@ -740,9 +739,7 @@ body.blur .main {
 }
 
 .decor-line::before {
-    content: "";
     position: absolute;
-    left: -5px;
     top: 50%;
     -webkit-transform: translate(-100%,-100%);
     transform: translate(-100%,-100%);
@@ -1103,6 +1100,8 @@ body.blur .main {
     font-weight: 500;
     font-size: .875rem;
     line-height: 120%;
+    color: var(--accent);
+    text-align: center;
     text-transform: uppercase;
     transition: color .2s ease-in-out,border-color .2s ease-in-out
 }
@@ -1203,12 +1202,12 @@ body.blur .main {
 }
 
 .header__logo {
-    max-width: 76px
+    max-width: 130px
 }
 
 .header__logo--img {
     width: 100%;
-    height: 25px;
+    height: 30px;
     -o-object-fit: contain;
     object-fit: contain
 }
@@ -1393,6 +1392,7 @@ body.blur .main {
 .intro {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     background: var(--dark-2)
 }
 
@@ -1654,6 +1654,7 @@ body.blur .main {
     display: flex;
     flex-wrap: wrap;
     padding-top: 30px;
+    overflow-x: hidden;
     overflow-y: visible
 }
 
@@ -2458,7 +2459,8 @@ body.blur .main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
-    grid-template-columns: 100%
+    grid-template-columns: 100%;
+    overflow-x: hidden
 }
 
 .add-section__wrapper {
@@ -3002,6 +3004,10 @@ body.blur .main {
         background: var(--accent)
     }
 
+    .main-title._line-height-min mark::before {
+        top: 18px
+    }
+
     .main-title {
         font-size: 2.5rem
     }
@@ -3303,6 +3309,10 @@ body.blur .main {
 
     .main-title mark::before {
         top: 45px
+    }
+
+    .main-title._line-height-min mark::before {
+        top: 30px
     }
 
     .main-title {
@@ -3683,6 +3693,10 @@ body.blur .main {
 
     .main-title mark::before {
         top: 65px
+    }
+
+    .main-title._line-height-min mark::before {
+        top: 40px
     }
 
     .main-title {
