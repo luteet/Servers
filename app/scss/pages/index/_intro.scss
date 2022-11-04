@@ -2,9 +2,8 @@
 
     display: flex;
     flex-direction: column;
+
     overflow-x: hidden;
-    
-    //position: relative;
 
     background: var(--dark-2);
 
@@ -33,11 +32,8 @@
 
         position: relative;
         z-index: 2;
-
-        /* min-height: 100%; */
         
     }
-    //overflow-y: auto;
 
     // .intro__bg
 
@@ -135,8 +131,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        //min-height: 100%;
 
         z-index: 2;
         position: relative;

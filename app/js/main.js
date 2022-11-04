@@ -1,8 +1,8 @@
-const body = document.querySelector('body'),
-    html = document.querySelector('html'),
-    wrapper = document.querySelector('.wrapper'),
-    header = document.querySelector('.header');
 
+const body = document.querySelector('body'),
+      html = document.querySelector('html'),
+      wrapper = document.querySelector('.wrapper'),
+      header = document.querySelector('.header');
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <popup> -=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -213,14 +213,18 @@ new Popup();
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 if(document.querySelector('.docSlider')) {
+
   docSlider.init({
     speed: 600,
-    afterChange : function(index){
+    afterChange : function(){
       history.pushState({}, "", "#" + docSlider.getCurrentPage().getAttribute('id'))
     },
   });
+
 } else {
+
   body.classList.add('._slider-active')
+
 }
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -237,6 +241,7 @@ body.addEventListener('click', function (event) {
     }
 
     // =-=-=-=-=-=-=-=-=-=- <Выбор языка сайта в шапке> -=-=-=-=-=-=-=-=-=-=-
+
     const headerLanguageSelected = $('.header__language--selected');
     if (headerLanguageSelected) {
       const headerLanguage = headerLanguageSelected.closest('.header__language');
@@ -246,6 +251,7 @@ body.addEventListener('click', function (event) {
         headerLanguage.classList.remove('_active')
       })
     }
+    
     // =-=-=-=-=-=-=-=-=-=- </Выбор языка сайта в шапке> -=-=-=-=-=-=-=-=-=-=-
 
 
@@ -312,13 +318,13 @@ body.addEventListener('click', function (event) {
 const tabNavWrapper = document.querySelector('.server__tab-nav--wrapper');
 function tabNavWrapperScroll() {
   const elemConfig = tabNavWrapper.querySelector('.server__tab-nav--list').getBoundingClientRect();
-  //console.log(tabNavWrapper.scrollWidth + ' ' + )
+  
   if(tabNavWrapper.scrollWidth <= (elemConfig.x - elemConfig.x - elemConfig.x + elemConfig.width + 10)) {
     tabNavWrapper.parentElement.classList.remove('_end');
   } else {
     tabNavWrapper.parentElement.classList.add('_end');
   }
-  //if((elemConfig.x + elemConfig.width / 2 - 1.5) <= 0) {
+  
   if(tabNavWrapper.scrollLeft <= 0) {
     tabNavWrapper.parentElement.classList.remove('_start');
   } else {
