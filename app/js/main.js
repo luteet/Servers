@@ -4,6 +4,8 @@ const body = document.querySelector('body'),
       wrapper = document.querySelector('.wrapper'),
       header = document.querySelector('.header');
 
+new lc_select('.custom-select');
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <popup> -=-=-=-=-=-=-=-=-=-=-=-=
 
 (function () {
@@ -251,7 +253,7 @@ body.addEventListener('click', function (event) {
         headerLanguage.classList.remove('_active')
       })
     }
-    
+
     // =-=-=-=-=-=-=-=-=-=- </Выбор языка сайта в шапке> -=-=-=-=-=-=-=-=-=-=-
 
 
@@ -420,7 +422,3 @@ function servicesItemZIndex() {
 }
 
 servicesItemZIndex();
-
-
-new lc_select('.custom-select');
-

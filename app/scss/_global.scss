@@ -16,10 +16,12 @@ body {
 
     overflow-y: auto;
     overflow-x: hidden;
+
     position: relative;
+    z-index: 2;
     
     touch-action: auto;
-    z-index: 2;
+
     &._slider-active {
         touch-action: none;
     }

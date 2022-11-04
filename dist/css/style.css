@@ -10,12 +10,16 @@ body,html {
     box-sizing: content-box
 }
 
-button,hr,input {
+.swiper-cube,.swiper-flip,button,hr,input {
     overflow: visible
 }
 
 progress,sub,sup {
     vertical-align: baseline
+}
+
+.docSlider-button,select {
+    -webkit-appearance: none
 }
 
 * {
@@ -35,10 +39,6 @@ progress,sub,sup {
 input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0
-}
-
-select {
-    -webkit-appearance: none
 }
 
 input[type=number] {
@@ -225,7 +225,6 @@ summary {
     margin: 5px 0;
     background-color: #333;
     opacity: .25;
-    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
@@ -542,6 +541,10 @@ body,html {
     line-height: 1
 }
 
+*,body {
+    line-height: 160%
+}
+
 .swiper-button-prev,.swiper-rtl .swiper-button-next {
     left: 10px;
     right: auto
@@ -590,10 +593,6 @@ body,html {
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0
-}
-
-.swiper-cube,.swiper-flip {
-    overflow: visible
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
@@ -1045,19 +1044,14 @@ body,html {
     min-height: 100vh
 }
 
-* {
-    line-height: 160%
-}
-
 body {
     font-family: var(--main-font);
     font-weight: 400;
-    line-height: 160%;
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
-    touch-action: auto;
     z-index: 2;
+    touch-action: auto;
     background: var(--dark-2);
     color: var(--white)
 }
