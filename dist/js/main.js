@@ -397,9 +397,10 @@ function servicesItemZIndex() {
 
 servicesItemZIndex();
 
-
-/* document.querySelectorAll('img').forEach(img => {
-  img.addEventListener('load', function(event) {
-    event.currentTarget.classList.add('loaded');
+window.onload = function() {
+  document.querySelectorAll('img').forEach(img => {
+    img.classList.add('loaded')
   })
-}) */
+}
+
+

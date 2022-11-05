@@ -466,8 +466,8 @@ img {
     &[alt]:not([alt=""]) {
         text-indent: initial;
     }
-    /* opacity: 0;
+    opacity: 0;
     &.loaded {
         opacity: 1;
-    } */
+    }
 }
