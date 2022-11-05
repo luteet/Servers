@@ -466,6 +466,13 @@ img {
     &[alt]:not([alt=""]) {
         text-indent: initial;
     }
+    /* opacity: 0;
+    &.loaded {
+        opacity: 1;
+    } */
+}
+
+.lazy-loading {
     opacity: 0;
     &.loaded {
         opacity: 1;

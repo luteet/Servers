@@ -404,3 +404,9 @@ window.onload = function() {
 }
 
 
+/* document.querySelectorAll('.lazy-loading').forEach(img => {
+  img.addEventListener('load', function() {
+    console.log('loaded')
+  })
+}) */
+
