@@ -463,6 +463,9 @@ body {
 img {
     border: none;
     text-indent: 100vw;
+    &[alt]:not([alt=""]) {
+        text-indent: initial;
+    }
     /* opacity: 0;
     &.loaded {
         opacity: 1;
