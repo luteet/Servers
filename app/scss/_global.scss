@@ -462,4 +462,8 @@ body {
 
 img {
     border: none;
+    opacity: 0;
+    &.loaded {
+        opacity: 1;
+    }
 }

@@ -7,8 +7,8 @@ $containerMin: 1280 + ($containerPadding * 2);
 $containerLarge: 1560 + ($containerPadding * 2);
 
 :root {
-    --title-font: 'Mazzard H';
-    --main-font: 'Mazzard H';
+    --title-font: 'Mazzard H', sans-serif;
+    --main-font: 'Mazzard H', sans-serif;
     
     --accent-light: #eedb99;
     --accent: #D0BD7B;
