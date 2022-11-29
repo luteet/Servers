@@ -16,6 +16,7 @@
         flex-direction: column;
 
         flex: 1 1 auto;
+        min-height: 100%;
 
         padding: 0 0 25px 0;
         @include _768 {
@@ -131,15 +132,6 @@
             }
         }
 
-        /* &._bottom &--img {
-            top: auto; bottom: 0;
-            @include _768 {
-                left: 0; top: auto; bottom: 0; right: auto;
-                transform: translate(0,18.5%);
-                object-position: bottom;
-            }
-        } */
-
         &._center &--img {
             @include _768 {
                 object-position: center right;
@@ -155,6 +147,7 @@
     // .intro__container
 
     &__container {
+        min-height: 100%;
         flex: 1 1 auto;
 
         display: flex;
@@ -194,7 +187,7 @@
         }
 
         @media (min-width: 1440px) {
-            padding-top: 55px;
+            padding-top: 45px;
         }
     }
 

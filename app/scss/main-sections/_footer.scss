@@ -103,16 +103,22 @@
         &--list {
             display: flex;
             flex-direction: column;
-
-            /* &:first-child {
-                padding-top: 30px;
-            } */
         }
 
         // .footer__nav--item
 
         &--item {
-            
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: var(--gray);
+            line-height: 150%;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            & > span {
+                padding: 5px 5px 0 5px;
+            }
         }
 
         // .footer__nav--link
@@ -121,6 +127,7 @@
             font-weight: 300;
             font-size: 0.875rem;
             color: var(--gray);
+            line-height: 150%;
 
             display: block;
             padding: 2.5px 0;

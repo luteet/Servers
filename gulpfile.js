@@ -192,12 +192,16 @@ let package = fs.readFileSync('package.json'),
     package = JSON.parse(package);
     name = package.name;
 
-function zipStart() {
-    return src(['./**', '!./node_modules/**', '!./package-lock.json', `!./${name}.zip`])
-        .pipe(dest(`./${name}/${name}/`))
+function delFolder() {
+    return del(`${name}`)
 }
 
-function zipEnd() {
+function createFolder() {
+    return src(['./**', '!./node_modules/**', '!./package-lock.json', `!./${name}.zip`])
+        .pipe(dest(`./${name}`))
+}
+
+function createZip() {
     return src(`./${name}/**`)
         .pipe(zipArchive(`${name}.zip`))
         .pipe(dest(`./`))
@@ -232,11 +236,13 @@ exports.ttf2woff2Convert = ttf2woff2Convert;
 exports.fonts = fonts;
 exports.htmlComponents = htmlComponents;
 exports.htmlCompilation = htmlCompilation;
-exports.zipStart = zipStart;
-exports.zipEnd = zipEnd;
+exports.createFolder = createFolder;
+exports.delFolder = delFolder;
+exports.createZip = createZip;
 exports.zipDel = zipDel;
 
 exports.fonts = series(ttf2woffConvert, ttf2woff2Convert, fonts);
-exports.zip = series(zipStart, zipEnd, zipDel);
+exports.folder = series(delFolder, createFolder);
+exports.zip = series(createFolder, createZip, zipDel);
 exports.webp = series(images, convertToWebp)
 exports.default = parallel(stylesLib, styles, watching, scriptsLib, scriptsMin, scripts, htmlCompilation, json, browsersync);

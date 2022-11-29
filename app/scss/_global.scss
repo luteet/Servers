@@ -125,7 +125,7 @@ body {
         padding: 13px 30px;
     }
 
-    background: transparent;
+    background: var(--dark-3);
     color: var(--accent);
 
     border-radius: 0;
@@ -303,12 +303,12 @@ body {
     color: var(--light);
 
     &._decor-lines {
-        margin-top: 30px;
+        margin-top: 20px;
         @include _768 {
             &::before {
                 content: '';
                 position: absolute;
-                left: 0; top: -40px;
+                left: 0; top: -25px;
                 width: 200%; height: 1px;
                 transform: translate(-50%,0);
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0) -1.75%, #FFFFFF 104.14%);
@@ -466,10 +466,6 @@ img {
     &[alt]:not([alt=""]) {
         text-indent: initial;
     }
-    /* opacity: 0;
-    &.loaded {
-        opacity: 1;
-    } */
 }
 
 .lazy-loading {
